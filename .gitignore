@@ -5,3 +5,5 @@ data/keras_model/
 data/demomodule/
 data/autograph/
 .idea
+*.png
+*.svg
