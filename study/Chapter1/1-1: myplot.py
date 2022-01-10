@@ -56,49 +56,42 @@ plt.show()
 
 # Allows plotting of one column versus another，比如说，某个人的年龄和性别，或者说，某个人的年龄和身高
 dftrain_raw.plot(kind='scatter', x='Age', y='Survived', alpha=0.2)
-plt.show()
 
 dftrain_raw.iloc[:30].plot(kind='bar', alpha=1)
 # plt.savefig('myplot1.svg', format='svg')
-plt.show()
 
 dftrain_raw.iloc[:10].plot(kind='line', alpha=1)
 # plt.savefig('myplot1.svg', format='svg')
-plt.show()
 
 # 纵轴坐标Frequency
 dftrain_raw.iloc[:10].plot(kind='hist', alpha=1)
 # plt.savefig('myplot1.svg', format='svg')
-plt.show()
 
 dftrain_raw.iloc[:10].plot(kind='box')
 # plt.savefig('myplot1.svg', format='svg')
-plt.show()
 
 # 类似于概览分布图，纵轴坐标Density
 dftrain_raw.iloc[:10].plot(kind='kde')
 # plt.savefig('myplot1.svg', format='svg')
-plt.show()
 
 # 各值累加区域图
 dftrain_raw.iloc[:10].plot(kind='area')
 # plt.savefig('myplot1.svg', format='svg')
-plt.show()
 
 # 饼图
 dftrain_raw.iloc[:10].plot(kind='pie', y='Fare')
 # plt.savefig('myplot1.svg', format='svg')
-plt.show()
 
 # 六边形分箱图，和scatter有些类似，这里看幸存和年龄两个维度的分布
 dftrain_raw.plot(kind='hexbin', x='Age', y='Survived', gridsize=15, cmap=plt.cm.Blues)
 plt.savefig('myplot1.svg', format='svg')
-plt.show()
 
 # 六边形分箱图可以看数据在两个维度的交叉分布
 # gridsize不是指每个网格的大小，而是指网格总数(横向)
 dftrain_raw.plot(kind='hexbin', x='Age', y='Fare', alpha=0.8, gridsize=40)
 plt.savefig('myplot2.svg', format='svg')
+
+# 为什么下面只需要一个plt.show()就够了？？？后续再研究
 plt.show()
 
 # 某前端仓库，JavaScript，https://github.com/d3/d3-hexbin
